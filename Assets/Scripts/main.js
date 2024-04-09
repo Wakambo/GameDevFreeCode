@@ -87,7 +87,7 @@ class Game{
         }
     }
     formatTimer(){
-        return (this.timer * 0.0001).toFixed(1);
+        return (this.timer * 0.001).toFixed(1);
     }
     drawStatusText(){
         this.ctx.save();
@@ -113,7 +113,7 @@ window.addEventListener('load',function(){
         lastTime = timeStamp;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         game.render(deltaTime);
-        this.ctx.fillText('Score:' + this.score,this.width - 10, 30);
+       
     }
     requestAnimationFrame(animate);
 
